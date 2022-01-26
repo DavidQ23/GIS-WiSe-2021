@@ -1,0 +1,38 @@
+.displayDetails {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+    width: 50%;
+    background-color: rgb(46, 211, 46);
+}
+
+.displayDetails div {
+
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    text-align: center;
+}
+
+#detailName {
+    border-bottom: 5px solid black;
+}
+
+#detailName p {
+    color: rgb(212, 64, 64);
+    font-size: 30px;
+}
+
+#detailNotiz p {
+    text-align: justify;
+    padding: 0px 10px 0px 10px;
+}
+
+#detailBearbeiten {
+    border-bottom: 5px solid black;
+    padding: 15px 0px 15px 0px;
+}
+
+h3 {
+    text-decoration: underline;
+}
