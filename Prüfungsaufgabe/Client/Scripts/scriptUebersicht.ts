@@ -15,5 +15,13 @@ namespace Gefrierschrank {
         let response: Response = await fetch(url);
         let answer: string = await response.text();
         let everyGefriergut: Gefriergut[] = JSON.parse(answer);
+
+        let displayTabelle: HTMLDivElement = <HTMLDivElement>document.getElementById("displayListe");
+        let inhaltstabelle: HTMLTableElement = <HTMLTableElement>document.getElementById("inhaltstabelle");
+        
+        //Aufbau der Seite
+        for (let i: number = 0; i < everyGefriergut.length; i++) {
+            
+        }
     }
 }

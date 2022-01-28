@@ -68,6 +68,11 @@ export namespace Gefrierschrank {
                 let mongoResponse: string = await saveGefriergut(gefriergut);
                 _response.write(mongoResponse);
             }
+
+            if (url.pathname == "/allGefriergut") {
+                let gefriergutliste: Gefriergut[] = await buildSite();
+                _response.write(JSON.stringify(gefriergutliste)); 
+            }
         }
 
         //Funktion zum Speichern der FormData
@@ -77,6 +82,13 @@ export namespace Gefrierschrank {
             return serverResponse;
         }
 
+        //Funktion um Seite auf Übersicht darzustellen
+
+        async function buildSite(): Promise<Gefriergut[]> {
+            let cursor: Mongo.Cursor = gefriergutliste.find();
+            let result: Gefriergut[] = await cursor.toArray();
+            return result;
+        }
         _response.end();
     }
 }

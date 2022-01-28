@@ -48,12 +48,22 @@ var Gefrierschrank;
                 let mongoResponse = await saveGefriergut(gefriergut);
                 _response.write(mongoResponse);
             }
+            if (url.pathname == "/allGefriergut") {
+                let gefriergutliste = await buildSite();
+                _response.write(JSON.stringify(gefriergutliste));
+            }
         }
         //Funktion zum Speichern der FormData
         function saveGefriergut(_gefriergut) {
             gefriergutliste.insertOne(_gefriergut);
             let serverResponse = "Gefriergut wurde hinzugefügt";
             return serverResponse;
+        }
+        //Funktion um Seite auf Übersicht darzustellen
+        async function buildSite() {
+            let cursor = gefriergutliste.find();
+            let result = await cursor.toArray();
+            return result;
         }
         _response.end();
     }
