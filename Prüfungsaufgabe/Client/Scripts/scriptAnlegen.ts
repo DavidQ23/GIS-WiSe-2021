@@ -1,5 +1,8 @@
 namespace Gefrierschrank {
 
+    let heutigesDatum: number = Date.now();
+    let datumString: string = heutigesDatum.toString();
+
     //Zugriff auf Form Elemente
     let newGefriergutForm: HTMLFormElement = <HTMLFormElement>document.getElementById("newGefriergut");
     let saveButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("saveButton");
@@ -11,7 +14,7 @@ namespace Gefrierschrank {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
         //Eingaben an die URL zur Weiterverarbeitung anhängen
-        url = url + "?" + query.toString() + "&menge=1"; 
+        url = url + "?" + query.toString() + "&anlegdatum=" + datumString + "&menge=1"; 
         console.log(url);
 
         let response: Response = await fetch(url);
