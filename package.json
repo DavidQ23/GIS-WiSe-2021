@@ -1,0 +1,26 @@
+{
+    "name": "gis-wise-2021",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+      "@types/mongodb": "^3.6.18",
+      "mongodb": "^3.6.9"
+    },
+    "devDependencies": {
+      "@types/node": "^15.12.1"
+    },
+    "scripts": {
+      "start": "node Prüfungsabgabe/Server/server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/DavidQ23/GIS-WiSe-2021.git"
+    },
+    "author": "david",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/DavidQ23/GIS-WiSe-2021/issues"
+    },
+    "homepage": "https://github.com/DavidQ23/GIS-WiSe-2021#readme"
+  }

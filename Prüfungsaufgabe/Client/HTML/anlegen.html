@@ -8,6 +8,7 @@
     <title>Anlegen eines neuen Gefrierguts</title>
     <link rel="stylesheet" href="../CSS/navbar.css">
     <link rel="stylesheet" href="../CSS/anlegen.css">
+    <script src="../Scripts/scriptAnlegen.js" defer></script>
 </head>
 
 <body>
@@ -22,15 +23,15 @@
         </div>
         <div id="hinzufuegen">
             <h2>Neues Gefriergut anlegen</h2>
-            <form id="newItem">
+            <form id="newGefriergut">
                 <label for="Itemname">Names des Gefrierguts</label> <br>
                 <input type="text" name="Itemname" id="Itemname"><br>
                 <label for="Ablaufdatum">Ablaufdatum</label><br>
                 <input type="date" name="Ablaufdatum" id="Ablaufdatum"><br>
                 <label for="Notiz">Notizen</label><br>
                 <textarea name="Notiz" id="Notiz" cols="59" rows="10"></textarea><br>
-                <button>Speichern</button> 
             </form>
+            <button type="button" class="saveButton">Speichern</button> 
         </div>
     </div>
 
