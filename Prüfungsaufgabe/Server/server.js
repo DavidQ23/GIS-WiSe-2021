@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Gefriergut = void 0;
+exports.Gefrierschrank = void 0;
 const Http = require("http");
 const Url = require("url");
 const Mongo = require("mongodb");
-var Gefriergut;
-(function (Gefriergut) {
+var Gefrierschrank;
+(function (Gefrierschrank) {
     //MongoDB verbinden und anlegen
     let gefriergutliste;
     async function connectWithDB(_url) {
@@ -57,5 +57,5 @@ var Gefriergut;
         }
         _response.end();
     }
-})(Gefriergut = exports.Gefriergut || (exports.Gefriergut = {}));
+})(Gefrierschrank = exports.Gefrierschrank || (exports.Gefrierschrank = {}));
 //# sourceMappingURL=server.js.map

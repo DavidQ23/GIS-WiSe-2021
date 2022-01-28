@@ -2,14 +2,14 @@ import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
-export namespace Gefriergut {
+export namespace Gefrierschrank {
     
     export interface Gefriergut {
         name: string;
         ablaufdatum: Date;
-        notiz: string;
         anlegdatum: Date;
-        anzahl: number;
+        notiz: string;
+        menge: number;
     }
 
 

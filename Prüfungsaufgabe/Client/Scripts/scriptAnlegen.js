@@ -1,6 +1,7 @@
 "use strict";
-var Kühlschrank;
-(function (Kühlschrank) {
+var Gefrierschrank;
+(function (Gefrierschrank) {
+    //Zugriff auf Form Elemente
     let newGefriergutForm = document.getElementById("newGefriergut");
     let saveButton = document.getElementById("saveButton");
     saveButton.addEventListener("cick", saveGefriergut);
@@ -8,7 +9,8 @@ var Kühlschrank;
         let formData = new FormData(document.forms[0]);
         let url = "https://davidqgissose2021.herokuapp.com/saveGefriergut";
         let query = new URLSearchParams(formData);
-        url = url + "?" + query.toString();
+        //Eingaben an die URL zur Weiterverarbeitung anhängen
+        url = url + "?" + query.toString() + "&menge=1";
         console.log(url);
         let response = await fetch(url);
         let answer = await response.text();
@@ -16,5 +18,5 @@ var Kühlschrank;
         newGefriergutForm.reset();
         window.location.reload();
     }
-})(Kühlschrank || (Kühlschrank = {}));
+})(Gefrierschrank || (Gefrierschrank = {}));
 //# sourceMappingURL=scriptAnlegen.js.map

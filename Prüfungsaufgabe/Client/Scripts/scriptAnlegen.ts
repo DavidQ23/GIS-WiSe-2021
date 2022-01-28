@@ -1,14 +1,7 @@
-namespace Kühlschrank {
-    interface Gefriergut {
-        name: string;
-        ablaufdatum: Date;
-        anlegdatum: Date;
-        notiz: string;
-        anzahl: number;
-    }
+namespace Gefrierschrank {
 
+    //Zugriff auf Form Elemente
     let newGefriergutForm: HTMLFormElement = <HTMLFormElement>document.getElementById("newGefriergut");
-
     let saveButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("saveButton");
     saveButton.addEventListener("cick", saveGefriergut);
 
@@ -17,7 +10,8 @@ namespace Kühlschrank {
         let url: string = "https://davidqgissose2021.herokuapp.com/saveGefriergut";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
-        url = url + "?" + query.toString();
+        //Eingaben an die URL zur Weiterverarbeitung anhängen
+        url = url + "?" + query.toString() + "&menge=1"; 
         console.log(url);
 
         let response: Response = await fetch(url);
